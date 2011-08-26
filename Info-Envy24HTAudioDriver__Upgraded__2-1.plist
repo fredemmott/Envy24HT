@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Envy24HTPCIAudioDriver</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.audio-evolution.driver.Envy24HT</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.14.0</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>Envy24HTPCIAudioDriver</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.audio-evolution.driver.Envy24HT</string>
+			<key>IOClass</key>
+			<string>com_audio_evolution_driver_Envy24HT</string>
+			<key>IOPCIMatch</key>
+			<string>0x17241412</string>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOAudioFamily</key>
+		<string>1.1</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>2.6</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>10.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>10.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>10.0</string>
+	</dict>
+</dict>
+</plist>
