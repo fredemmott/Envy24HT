@@ -431,17 +431,19 @@ IOReturn Envy24HTAudioDevice::performPowerStateChange(IOAudioDevicePowerState ol
 													  IOAudioDevicePowerState newPowerState, 
 								 					  UInt32 *microsecondsUntilComplete)
 {
-	//IOLog("Envy24HTAudioDevice::performPowerStateChange!, old = %d, new = %d\n", oldPowerState, newPowerState);
+	IOLog("Envy24HTAudioDevice::performPowerStateChange!, old = %d, new = %d\n", oldPowerState, newPowerState);
 	
 	if (newPowerState == kIOAudioDeviceSleep) // go to sleep, power down and save settings
 	{
 		IOLog("Envy24HTAudioDevice::performPowerStateChange -> entering sleep\n");
-	}
+		deactivateAllAudioEngines();
+        }
 	else if (newPowerState != kIOAudioDeviceSleep &&
 			 oldPowerState == kIOAudioDeviceSleep) // wake from sleep, power up and restore settings
 	{
 		IOLog("Envy24HTAudioDevice::performPowerStateChange -> waking up!\n");
-        card_init(card);
+		card_init(card);
+		createAudioEngine();
 	}
 	
 	return kIOReturnSuccess;
