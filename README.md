@@ -8,3 +8,10 @@ Envy24HT
 ========
 
 OSX driver for several Terratec, M-Audio, ESI, and Audiotrak sound cards. Forked from http://www.audio-evolution.com/drivers/
+
+License
+=======
+
+For any changes authored by Fred Emmott:
+
+I am providing the code to you under an open source license. Because this is my personal repository, the license you receive to my code is from me and not from my employer (Facebook).
